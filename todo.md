@@ -1,0 +1,117 @@
+# Location Expansion Tasks
+
+- [x] Add component-level regression coverage for the restored administrator-only field-check entry point.
+- [x] Compare the fourth attached requirements document against the current CleanRoute implementation and documentation.
+- [x] Document new, changed, and conflicting fourth-attachment requirements.
+- [x] Implement compatible fourth-attachment requirements without replacing working CleanRoute architecture.
+- [x] Validate and checkpoint the fourth-attachment integration.
+- [ ] Preserve the five administrator-route browser checks as externally blocked pending items; do not retry OAuth/CAPTCHA.
+- [ ] Deliver the final automated security, API, build, and blocker report without modifying application code.
+- [ ] Keep the five normal-user administrator-route browser checks pending until a valid app-bound OAuth session is available.
+- [x] Finalize and report only automated authorization, API, and production-build verification results without changing application code.
+- [x] Replace the stale Bengaluru browser title with Maharashtra-first CleanRoute metadata.
+- [x] Record the CAPTCHA-blocked normal-user browser verification and its safe retry steps.
+- [x] Revalidate automated access-control tests and the production build before final delivery.
+- [x] Verify the exact CleanRoute preview URL, app login entrypoint, and OAuth callback behavior for a separate normal-user session.
+- [x] Record whether the normal-user browser route test can proceed without changing any account or role.
+- [ ] Verify /admin, /admin/toilets, /admin/field-checks, /admin/reviews, and /admin/reports using the temporary normal-user session without modifying any account or data.
+- [ ] Record the normal-user direct-route results in the role access report.
+- [x] Compare the third attached requirements document with the current CleanRoute PRD, design, persistence workflow, and implementation.
+- [x] Document new, changed, and conflicting requirements from the third attachment.
+- [x] Implement compatible third-attachment requirements without replacing current architecture.
+- [ ] Perform the user-operated two-account browser verification when a separate normal account is available.
+- [ ] Complete the final normal-user browser verification and close the third-attachment integration validation.
+- [x] Verify persistent workflow contracts without adding fabricated field observations or reports.
+- [x] Verify storage, authentication, authorization, distance coordinates, responsive layouts, tests, and production build.
+- [x] Save the final validated full-stack CleanRoute checkpoint.
+- [x] Document the genuine-observation submission and moderation handoff steps.
+- [x] Compare the second attached requirements document against the Maharashtra-first PRD and current code.
+- [x] Document new, changed, and conflicting requirements in the research record.
+- [x] Implement compatible requirements while preserving the current locator architecture.
+- [x] Validate and checkpoint the requirements-integration update.
+- [x] Upgrade the existing CleanRoute project to managed database, authentication, APIs, and storage.
+- [x] Create persistent facility, field-check, evidence, report, and moderation data models.
+- [x] Replace local field-check and report drafts with authenticated persistent submissions.
+- [x] Add protected report moderation and real post-submission detail refresh.
+- [x] Validate the protected moderation route and persistent submission UI end to end.
+- [x] Inspect the attached Maharashtra project requirements and current locator implementation.
+- [x] Research additional public-toilet discovery listings in Panvel and Navi Mumbai.
+- [x] Refocus the data model, evidence language, sources, and statistics on Maharashtra.
+- [x] Convert the locator to Maharashtra-first map bounds, filters, and interactive cards.
+- [x] Remove Bengaluru-specific presentation content that no longer applies.
+- [x] Research corroborated public-toilet listings in Khopoli.
+- [x] Research corroborated public-toilet listings in Rasayani.
+- [x] Research corroborated public-toilet listings in Navi Mumbai.
+- [x] Add evidence notes and source links for the added locations.
+- [x] Extend the locator data, filters, map bounds, and location cards.
+- [x] Repair null map-rating rendering for unreviewed facilities.
+- [x] Validate the expanded dashboard and save a deliverable checkpoint.
+- [x] Document the new product-messaging and responsive-admin-action requirements against the current CleanRoute implementation.
+- [x] Redesign the selected-detail administrator action group with equal-height, non-clipping desktop and mobile controls.
+- [x] Reframe the hero and supporting copy around public toilet discovery while retaining Maharashtra as launch-region context.
+- [x] Reposition field verification as a trust feature rather than primary homepage branding.
+- [x] Verify the refined homepage and administrator controls on desktop, tablet, and mobile without changing protected workflows.
+- [x] Run automated checks, document the UI-only refinement, and save a reviewed checkpoint.
+- [x] Reassess the live authentication path and direct administrator-route safeguards without modifying accounts, roles, or data.
+- [ ] Complete the five read-only normal-user administrator-route checks when a valid app-bound session is available.
+- [ ] Execute the five authorized normal-user administrator-route checks without modifying data, roles, submissions, or the administrator session.
+- [ ] Confirm that My Browser is attached to the existing authenticated normal-user CleanRoute tab without initiating OAuth or changing sessions.
+- [ ] Confirm the reconnected tab exposes normal-user review/report controls and no administrator controls before route testing.
+- [ ] Confirm the browser bridge is responsive after reconnection before administrator-route testing.
+- [ ] Confirm the latest My Browser reconnection is responsive and attached to the normal-user locator tab.
+- [ ] Confirm the most recently reconnected tab does not expose administrator controls before protected-route testing.
+- [ ] Resume and complete the remaining normal-user administrator-route verification using only read-only navigation.
+- [ ] Confirm the newly connected My Browser tab is the normal-user locator session before checking administrator routes.
+- [ ] Confirm the corrected My Browser connection no longer exposes the administrator account before valid route testing.
+- [x] Diagnose why the normal-user application OAuth flow returns to the Manus editor instead of CleanRoute.
+- [x] Correct any confirmed OAuth return-path issue without changing user roles, data, or the administrator session (no correctable in-app issue was found; the callback is externally not reached).
+- [x] Document the external OAuth callback blocker and retain all five normal-user administrator-route browser checks as pending and not passed.
+- [x] Record the user-confirmed OAuth behavior: the expected Manus sign-in page appears, but the completed sign-in returns to the Manus editor instead of CleanRoute’s callback.
+- [x] Complete the user-approved automated OAuth, authorization, test, build, usability validation, and reviewed checkpoint without modifying data or roles.
+- [x] Resolve any confirmed reliability issue, re-run full validation, and document the final operational state.
+- [x] Make the locator map handle managed Google Maps script failures without hanging or leaving the map interaction in an indeterminate state.
+- [x] Compare the application-level email/password authentication attachment against the existing CleanRoute OAuth, database, role, and route architecture.
+- [x] Design a secure password, session, role, and return-to-original-action model without duplicating user records or weakening authorization.
+- [x] Add CleanRoute registration, user login, admin login, logout, password hashing, session validation, and rate-limited backend authentication procedures.
+- [x] Replace end-user Manus OAuth entry points with CleanRoute login/registration and preserve public browsing.
+- [x] Add return-to-review and return-to-report behavior after application authentication.
+- [x] Implement role-aware normal-user and administrator navigation and route access views.
+- [ ] Add and run normal-user/admin authentication, ownership, route-protection, refresh-persistence, and error-state tests without inserting civic-data fixtures.
+- [ ] Document, validate, and checkpoint the application-level authentication migration.
+- [ ] Complete the required real-browser normal-user registration/login, return-to-action, refresh, logout, administrator password setup/login, and read-only route checks without submitting civic data.
+- [ ] Compare the authenticated-header, review/rating visibility, moderation, map, and responsive requirements against current CleanRoute implementation.
+- [ ] Remove the authenticated header’s detached empty band and keep compact account controls, My Contributions, and sign-out in one coherent responsive header.
+- [ ] Correct the reported login-page punctuation or typography defect without rewriting unrelated authentication copy.
+- [ ] Verify and correct persisted public review/rating queries, same-facility aggregation, publication status, cache refresh, and My Contributions coexistence without fabricating reviews or ratings.
+- [ ] Investigate the managed map regression, restore actual map/markers if configuration is available, and retain an honest fallback only for genuine external service failures.
+- [ ] Add regression coverage for header state, public community aggregation/visibility/persistence, and map state without inserting civic-data fixtures.
+- [ ] Validate desktop, tablet, mobile, public/user/admin flows, and checkpoint the reported fixes.
+- [ ] Inspect and improve only confirmed administrator-panel layout, loading, empty-state, action-feedback, and responsive regressions without changing roles or workflows.
+- [ ] Verify administrator/public database consistency and read-only role-route protection across admin dashboard, toilets, field checks, reviews, and reports.
+- [ ] Publish only the existing user-authorized pending reviews through the administrator moderation workflow; do not create, edit, or delete civic content.
+- [ ] Verify the moderated reviews and same-facility public aggregate persist after refresh.
+- [x] Audit the current Find Toilets Near Me and Sort by Distance handlers, location state, distance calculation, and published facility flow to identify their exact root causes.
+- [x] Fix only browser permission/loading/error states, current coordinates, nearby published results, dynamic distance display, and nearest-to-farthest sorting.
+- [x] Add location-feature regressions for granted, denied, unavailable, and pre-location cases plus existing search/filter compatibility.
+- [x] Validate, document, and checkpoint the targeted location feature fix without changing unrelated application features.
+- [x] Review the existing distance display, geolocation loading state, and map integration for the requested user-facing extensions.
+- [x] Add a user-facing kilometers/miles toggle that updates dynamically calculated distance labels without changing facility data.
+- [x] Add an accessible in-progress geolocation spinner or skeleton state while the browser location request is active.
+- [x] Display the nearest already-filtered results as interactive map pins alongside the user's current location when the map is available.
+- [x] Add regression coverage and validate desktop/mobile behavior for units, geolocation loading, and location-aware map pins.
+- [x] Document, checkpoint, and deliver the requested locator enhancements.
+- [x] Correct the supplied locator headline’s punctuation and spacing while preserving its visual treatment.
+- [x] Verify and checkpoint the targeted headline correction.
+- [x] Correct the displayed login-page locator headline’s punctuation and spacing without changing authentication behavior or layout.
+- [x] Verify and checkpoint the live login-page headline correction.
+- [x] Reproduce and diagnose the reported Find Toilets Near Me malfunction on the live deployed locator.
+- [x] Fix only the verified Find Toilets Near Me failure without changing unrelated locator or authentication behavior.
+- [x] Run focused browser and automated location-flow regressions, then checkpoint the repair.
+- [x] Add a fallback-location toast notification and a manual refresh-location control near locator results.
+- [x] Improve fallback-failure recovery guidance with clear location-service enablement instructions.
+- [x] Create and validate a reusable browser-geolocation fallback repair skill.
+- [x] Run focused browser and automated regressions for the enhanced location flow, then checkpoint it.
+- [x] Reproduce the attachment-reported deployed Find Toilets Near Me no-feedback issue and inspect its click, console, network, and geolocation chain.
+- [x] Fix only the verified Find Toilets Near Me interaction or visible-feedback failure.
+- [x] Manually validate location allow, denial, fallback, retry, results, distance, sort, search, filters, and map/list linkage.
+- [x] Run targeted regression tests and a production build, document the requested PASS/FAIL report, and checkpoint the location-only repair.

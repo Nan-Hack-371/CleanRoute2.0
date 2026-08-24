@@ -1,0 +1,21 @@
+import DashboardLayout from "@/components/DashboardLayout";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { trpc } from "@/lib/trpc";
+import { Loader2, Pencil, Trash2 } from "lucide-react";
+import { useState } from "react";
+
+function ContributionContent() {
+  const { user, loading } = useAuth({ redirectOnUnauthenticated: true });
+  const utils = trpc.useUtils();
+  const reviews = trpc.reviews.mine.useQuery(undefined, { enabled: Boolean(user) });
+  const reports = trpc.facilities.myReports.useQuery(undefined, { enabled: Boolean(user) });
+  const updateReview = trpc.reviews.updateMine.useMutation({ onSuccess: () => utils.reviews.mine.invalidate() });
+  const deleteReview = trpc.reviews.deleteMine.useMutation({ onSuccess: () => utils.reviews.mine.invalidate() });
+  const [editing, setEditing] = useState<{ id: string; rating: number; body: string } | null>(null);
+
+  if (loading || !user) return <div className="flex min-h-[45vh] items-center justify-center gap-2"><Loader2 className="animate-spin" size={18} /> Loading your contributions…</div>;
+  return <main className="mx-auto max-w-5xl space-y-8 p-5 sm:p-8"><div><p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Authenticated member</p><h1 className="mt-2 text-3xl font-semibold">My contributions</h1><p className="mt-2 text-sm text-muted-foreground">You can review your own submitted content. Editing a review returns it to moderation; reports remain visible while an administrator investigates.</p></div><section className="rounded-2xl border bg-card p-5"><h2 className="text-xl font-semibold">My reviews</h2><div className="mt-4 space-y-3">{reviews.isLoading ? <p className="text-sm text-muted-foreground">Loading reviews…</p> : reviews.data?.length ? reviews.data.map(review => <article key={review.id} className="rounded-xl border p-4"><div className="flex flex-wrap items-start justify-between gap-3"><div><p className="font-semibold">{review.rating}/5 · <span className="text-sm font-normal text-muted-foreground">{review.status}</span></p><p className="mt-2 text-sm">{review.body || "No written review."}</p></div><div className="flex gap-2"><Button size="sm" variant="outline" onClick={() => setEditing({ id: review.id, rating: review.rating, body: review.body || "" })}><Pencil size={14} /> Edit</Button><Button size="sm" variant="outline" disabled={deleteReview.isPending} onClick={() => deleteReview.mutate({ id: review.id })}><Trash2 size={14} /> Remove</Button></div></div>{editing?.id === review.id && <form onSubmit={event => { event.preventDefault(); updateReview.mutate({ id: editing.id, rating: editing.rating, body: editing.body || undefined }); setEditing(null); }} className="mt-4 grid gap-3 border-t pt-4"><input type="number" min="1" max="5" value={editing.rating} onChange={event => setEditing(current => current ? { ...current, rating: Number(event.target.value) } : current)} className="w-28 rounded-md border bg-background px-3 py-2 text-sm" /><textarea value={editing.body} onChange={event => setEditing(current => current ? { ...current, body: event.target.value } : current)} className="min-h-20 rounded-md border bg-background px-3 py-2 text-sm" /><div className="flex gap-2"><Button size="sm" type="submit">Save for moderation</Button><Button size="sm" variant="outline" type="button" onClick={() => setEditing(null)}>Cancel</Button></div></form>}</article>) : <p className="text-sm text-muted-foreground">You have not submitted any reviews.</p>}</div></section><section className="rounded-2xl border bg-card p-5"><h2 className="text-xl font-semibold">My issue reports</h2><div className="mt-4 space-y-3">{reports.isLoading ? <p className="text-sm text-muted-foreground">Loading reports…</p> : reports.data?.length ? reports.data.map(report => <article key={report.id} className="rounded-xl border p-4"><p className="font-semibold capitalize">{report.status} · {report.reportType}</p><p className="mt-2 text-sm text-muted-foreground">{report.description || "No additional description supplied."}</p></article>) : <p className="text-sm text-muted-foreground">You have not submitted any issue reports.</p>}</div></section></main>;
+}
+
+export default function MyContributions() { return <DashboardLayout><ContributionContent /></DashboardLayout>; }
